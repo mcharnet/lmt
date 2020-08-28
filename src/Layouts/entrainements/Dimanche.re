@@ -1,5 +1,3 @@
-open TW;
-
 let title = "Le dimanche";
 let images: list(Image.image) = [
   {
