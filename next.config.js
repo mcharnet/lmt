@@ -1,5 +1,15 @@
-const withTM = require('next-transpile-modules')(['bs-platform'])
+const bsconfig = require('./bsconfig.json');
 
-module.exports = withTM({
-  pageExtensions: ['jsx', 'js', 'bs.js'],
-})
+const transpileModules = ["bs-platform"].concat(bsconfig["bs-dependencies"]);
+const withTM = require("next-transpile-modules")(transpileModules);
+
+const config = {
+    webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    
+    return config;
+  },
+  target: 'serverless',
+  pageExtensions: ["jsx", "js", "bs.js"],
+};
+
+module.exports = withTM(config);
