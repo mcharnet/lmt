@@ -2,8 +2,11 @@
   "name": "lmt",
   "version": "0.1.0",
   "scripts": {
+    "dev": "concurrently \"bsb -clean-world -make-world -w\" \"next dev\"",
+    "dev:reason": "bsb -clean-world -make-world -w",
+    "dev:next": "next dev",
     "build": "bsb -clean-world -make-world && next build",
-    "start": "bsb -make-world -w -ws _ ",
+    "start": "next start",
     "clean": "bsb -clean-world",
     "server": "moduleserve ./ --port 8001",
     "test": "echo \"Error: no test specified\" && exit 1"

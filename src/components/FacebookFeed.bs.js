@@ -1,28 +1,8 @@
 'use strict';
 
-var TW = require("re-tailwind/src/TW.bs.js");
 var React = require("react");
 
 function FacebookFeed(Props) {
-  TW.make({
-        hd: {
-          TAG: /* Width */25,
-          _0: /* WFull */46
-        },
-        tl: {
-          hd: {
-            TAG: /* Overflow */18,
-            _0: /* OverflowHidden */1
-          },
-          tl: {
-            hd: {
-              TAG: /* Display */52,
-              _0: /* Grid */5
-            },
-            tl: /* [] */0
-          }
-        }
-      });
   return React.createElement("iframe", {
               height: "800",
               scrolling: "no",
