@@ -11,10 +11,7 @@ let make = () => {
         <Text fontSize=Text2xl align=TextCenter color=TextRed600>
           {React.string(completText)}
         </Text>
-        <Text
-          fontSize=Text2xl
-          align=TextCenter
-          color=TextBlue600>
+        <Text fontSize=Text2xl align=TextCenter color=TextBlue600>
           {React.string(rejoindreText)}
         </Text>
         <Image
@@ -23,83 +20,57 @@ let make = () => {
         />
         <Text>
           <p>
-          <Text>{React.string({j|La dimension |j})}</Text>
-            <Text color=TextBlue600>
-              {React.string(
-                 {j|montagne |j},
-               )}
-            </Text>
+            <Text> {React.string({j|La dimension |j})} </Text>
+            <Text color=TextBlue600> {React.string({j|montagne |j})} </Text>
             <Text>
               {React.string(
                  {j|étant importante à LMT, nous cherchons donc des gens qui seront |j},
                )}
             </Text>
             <Text color=TextBlue600>
-              {React.string(
-                 {j|enthousiastes |j},
-               )}
+              {React.string({j|enthousiastes |j})}
             </Text>
-             <Text>
-              {React.string(
-                 {j|à l‘idée de pratiquer aussi du |j},
-               )}
+            <Text>
+              {React.string({j|à l‘idée de pratiquer aussi du |j})}
             </Text>
             <Text color=TextBlue600>
-              {React.string(
-                 {j|Trail en montagne|j},
-               )}
+              {React.string({j|Trail en montagne|j})}
             </Text>
-             <Text>
-              {React.string(
-                 {j|. Peu importe le niveau même si une  |j},
-               )}
+            <Text>
+              {React.string({j|. Peu importe le niveau même si une  |j})}
             </Text>
-             <Text color=TextBlue600>
-              {React.string(
-                 {j|expérience en trail et des sports outdoor |j},
-               )}
+            <Text color=TextBlue600>
+              {React.string({j|expérience en trail et des sports outdoor |j})}
             </Text>
-             <Text>
-              {React.string(
-                 {j|st tout de même |j},
-               )}
+            <Text> {React.string({j|st tout de même |j})} </Text>
+            <Text color=TextBlue600>
+              {React.string({j|recommandée |j})}
             </Text>
-              <Text color=TextBlue600>
-              {React.string(
-                 {j|recommandée |j},
-               )}
-            </Text>
-             <Text>
-              {React.string(
-                 {j| par soucis d’homogénéité.|j},
-               )}
+            <Text>
+              {React.string({j| par soucis d’homogénéité.|j})}
             </Text>
           </p>
           <p>
-           <Text>{React.string({j|Par ailleurs, Lyon Mountain Trail a vocation à rester à |j})}</Text>
-            <Text color=TextBlue600>
-              {React.string(
-                 {j|taille humaine |j},
-               )}
-            </Text>
             <Text>
               {React.string(
-                 {j|pour garder un |j},
+                 {j|Par ailleurs, Lyon Mountain Trail a vocation à rester à |j},
                )}
             </Text>
             <Text color=TextBlue600>
-              {React.string(
-                 {j|esprit convivial |j},
-               )}
+              {React.string({j|taille humaine |j})}
             </Text>
-             <Text>
+            <Text> {React.string({j|pour garder un |j})} </Text>
+            <Text color=TextBlue600>
+              {React.string({j|esprit convivial |j})}
+            </Text>
+            <Text>
               {React.string(
                  {j| . Pour cela, le bureau examine chaque candidature.|j},
                )}
             </Text>
           </p>
           <p>
-            <Text>{React.string({j|Vous aimez, comme nous|j})}</Text>
+            <Text> {React.string({j|Vous aimez, comme nous|j})} </Text>
             <Text color=TextBlue600>
               {React.string(
                  {j| pratiquer le trail et les sports outdoor sous quelque forme que ce soit|j},
@@ -121,3 +92,5 @@ let make = () => {
     </Card>
   </Layout>;
 };
+
+let default = make;

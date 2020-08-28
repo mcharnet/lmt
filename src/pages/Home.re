@@ -34,3 +34,5 @@ let make = () => {
     </Card>
   </Layout>;
 };
+
+let default = make;

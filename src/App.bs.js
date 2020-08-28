@@ -6,7 +6,7 @@ var Home$Lmt = require("./pages/Home.bs.js");
 var News$Lmt = require("./pages/News.bs.js");
 var Route$Lmt = require("./components/Route.bs.js");
 var Bureau$Lmt = require("./pages/Bureau.bs.js");
-var Header$Lmt = require("./Layouts/Header.bs.js");
+var Header$Lmt = require("./layouts/Header.bs.js");
 var Adhesion$Lmt = require("./pages/Adhesion.bs.js");
 var Entrainements$Lmt = require("./pages/Entrainements.bs.js");
 

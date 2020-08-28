@@ -3,11 +3,11 @@
 var React = require("react");
 var Card$Lmt = require("../components/Card.bs.js");
 var Grid$Lmt = require("../components/Grid.bs.js");
-var Jeudi$Lmt = require("../Layouts/entrainements/Jeudi.bs.js");
-var Mardi$Lmt = require("../Layouts/entrainements/Mardi.bs.js");
-var Layout$Lmt = require("../Layouts/Layout.bs.js");
+var Jeudi$Lmt = require("../layouts/entrainements/Jeudi.bs.js");
+var Mardi$Lmt = require("../layouts/entrainements/Mardi.bs.js");
+var Layout$Lmt = require("../layouts/Layout.bs.js");
 var Divider$Lmt = require("../components/Divider.bs.js");
-var Dimanche$Lmt = require("../Layouts/entrainements/Dimanche.bs.js");
+var Dimanche$Lmt = require("../layouts/entrainements/Dimanche.bs.js");
 
 function Entrainements(Props) {
   return React.createElement(Layout$Lmt.make, {
@@ -23,5 +23,10 @@ function Entrainements(Props) {
 
 var make = Entrainements;
 
+var $$default = Entrainements;
+
 exports.make = make;
+exports.$$default = $$default;
+exports.default = $$default;
+exports.__esModule = true;
 /* react Not a pure module */

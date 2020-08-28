@@ -8,7 +8,7 @@ var Cell$Lmt = require("../components/Cell.bs.js");
 var Grid$Lmt = require("../components/Grid.bs.js");
 var Avatar$Lmt = require("../components/Avatar.bs.js");
 var Bureau$Lmt = require("./Bureau.bs.js");
-var Layout$Lmt = require("../Layouts/Layout.bs.js");
+var Layout$Lmt = require("../layouts/Layout.bs.js");
 var Caml_option = require("bs-platform/lib/js/caml_option.js");
 var FacebookFeed$Lmt = require("../components/FacebookFeed.bs.js");
 
@@ -44,5 +44,10 @@ function Home(Props) {
 
 var make = Home;
 
+var $$default = Home;
+
 exports.make = make;
+exports.$$default = $$default;
+exports.default = $$default;
+exports.__esModule = true;
 /* react Not a pure module */

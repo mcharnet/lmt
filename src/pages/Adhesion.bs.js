@@ -5,7 +5,7 @@ var Card$Lmt = require("../components/Card.bs.js");
 var Grid$Lmt = require("../components/Grid.bs.js");
 var Text$Lmt = require("../components/Text.bs.js");
 var Image$Lmt = require("../components/Image.bs.js");
-var Layout$Lmt = require("../Layouts/Layout.bs.js");
+var Layout$Lmt = require("../layouts/Layout.bs.js");
 
 var completText = "Victime de notre succès, nous sommes au complet pour le moment et stoppons les adhésions pour la saison 2019-2020";
 
@@ -86,7 +86,12 @@ function Adhesion(Props) {
 
 var make = Adhesion;
 
+var $$default = Adhesion;
+
 exports.completText = completText;
 exports.rejoindreText = rejoindreText;
 exports.make = make;
+exports.$$default = $$default;
+exports.default = $$default;
+exports.__esModule = true;
 /* react Not a pure module */
