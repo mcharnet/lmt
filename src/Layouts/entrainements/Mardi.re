@@ -1,5 +1,3 @@
-open TW;
-
 let images: list(Image.image) = [
   {
     alt: "Sortie du mardi - chaises",
