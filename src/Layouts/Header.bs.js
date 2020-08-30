@@ -16,22 +16,22 @@ var headerLinks = {
   tl: {
     hd: {
       name: " Entraînements / Sorties ",
-      href: "#/entrainements"
+      href: "/entrainements"
     },
     tl: {
       hd: {
         name: " Qui sommes-nous ? ",
-        href: "#/bureau"
+        href: "/bureau"
       },
       tl: {
         hd: {
           name: " Adhésion ",
-          href: "#/adhesion"
+          href: "/adhesion"
         },
         tl: {
           hd: {
             name: " Nous y étions ",
-            href: "#/news"
+            href: "/news"
           },
           tl: {
             hd: {

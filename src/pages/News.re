@@ -1,6 +1,6 @@
 [@react.component]
 let make = () => {
-  <Layout> <FacebookFeed /> </Layout>;
+  <FacebookFeed />;
 };
 
 let default = make;

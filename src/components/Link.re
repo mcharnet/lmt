@@ -16,7 +16,7 @@ let make = (~name, ~href, ~fontSize=TextBase) => {
     ]
     |> make;
 
-  <a className=linkClass onClick={handleClick(href)}>
-    {React.string(name)}
-  </a>;
+  <Next.Link href>
+    <a className=linkClass> {React.string(name)} </a>
+  </Next.Link>;
 };

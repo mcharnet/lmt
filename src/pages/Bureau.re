@@ -47,19 +47,17 @@ let members = [
 
 [@react.component]
 let make = () => {
-  <Layout>
-    <Card title="Le bureau">
-      <Grid cols=GridCols6 gap=Gap12>
-        {List.map(
-           ({name, role, src, col, desc}) =>
-             <Cell col> <Avatar name ?role src desc /> </Cell>,
-           members,
-         )
-         |> Array.of_list
-         |> React.array}
-      </Grid>
-    </Card>
-  </Layout>;
+  <Card title="Le bureau">
+    <Grid cols=GridCols6 gap=Gap12>
+      {List.map(
+         ({name, role, src, col, desc}) =>
+           <Cell col> <Avatar name ?role src desc /> </Cell>,
+         members,
+       )
+       |> Array.of_list
+       |> React.array}
+    </Grid>
+  </Card>;
 };
 
 let default = make;

@@ -2,7 +2,8 @@
 
 var TW = require("re-tailwind/src/TW.bs.js");
 var React = require("react");
-var ReasonReactRouter = require("reason-react/src/ReasonReactRouter.bs.js");
+var Link = require("next/link");
+var ReasonReactRouter = require("reason-react/src/ReasonReactRouter.js");
 
 function handleClick(href, $$event) {
   if (!$$event.defaultPrevented) {
@@ -12,7 +13,7 @@ function handleClick(href, $$event) {
   
 }
 
-function Link(Props) {
+function Link$1(Props) {
   var name = Props.name;
   var href = Props.href;
   var fontSizeOpt = Props.fontSize;
@@ -36,15 +37,15 @@ function Link(Props) {
           }
         }
       });
-  return React.createElement("a", {
-              className: linkClass,
-              onClick: (function (param) {
-                  return handleClick(href, param);
-                })
-            }, name);
+  return React.createElement(Link.default, {
+              href: href,
+              children: React.createElement("a", {
+                    className: linkClass
+                  }, name)
+            });
 }
 
-var make = Link;
+var make = Link$1;
 
 exports.handleClick = handleClick;
 exports.make = make;

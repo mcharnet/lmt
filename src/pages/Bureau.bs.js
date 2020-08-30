@@ -7,7 +7,6 @@ var Card$Lmt = require("../components/Card.bs.js");
 var Cell$Lmt = require("../components/Cell.bs.js");
 var Grid$Lmt = require("../components/Grid.bs.js");
 var Avatar$Lmt = require("../components/Avatar.bs.js");
-var Layout$Lmt = require("../layouts/Layout.bs.js");
 var Caml_option = require("bs-platform/lib/js/caml_option.js");
 
 var members = {
@@ -58,28 +57,26 @@ var members = {
 };
 
 function Bureau(Props) {
-  return React.createElement(Layout$Lmt.make, {
-              children: React.createElement(Card$Lmt.make, {
-                    children: React.createElement(Grid$Lmt.make, {
-                          children: $$Array.of_list(List.map((function (param) {
-                                      var tmp = {
-                                        name: param.name,
-                                        src: param.src,
-                                        desc: param.desc
-                                      };
-                                      if (param.role !== undefined) {
-                                        tmp.role = Caml_option.valFromOption(param.role);
-                                      }
-                                      return React.createElement(Cell$Lmt.make, {
-                                                  children: React.createElement(Avatar$Lmt.make, tmp),
-                                                  col: param.col
-                                                });
-                                    }), members)),
-                          cols: /* GridCols6 */5,
-                          gap: /* Gap12 */9
-                        }),
-                    title: "Le bureau"
-                  })
+  return React.createElement(Card$Lmt.make, {
+              children: React.createElement(Grid$Lmt.make, {
+                    children: $$Array.of_list(List.map((function (param) {
+                                var tmp = {
+                                  name: param.name,
+                                  src: param.src,
+                                  desc: param.desc
+                                };
+                                if (param.role !== undefined) {
+                                  tmp.role = Caml_option.valFromOption(param.role);
+                                }
+                                return React.createElement(Cell$Lmt.make, {
+                                            children: React.createElement(Avatar$Lmt.make, tmp),
+                                            col: param.col
+                                          });
+                              }), members)),
+                    cols: /* GridCols6 */5,
+                    gap: /* Gap12 */9
+                  }),
+              title: "Le bureau"
             });
 }
 

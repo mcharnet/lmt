@@ -4,10 +4,10 @@ type link = {
 };
 let headerLinks = [
   {name: {j| Accueil |j}, href: "/"},
-  {name: {j| Entraînements / Sorties |j}, href: "#/entrainements"},
-  {name: {j| Qui sommes-nous ? |j}, href: "#/bureau"},
-  {name: {j| Adhésion |j}, href: "#/adhesion"},
-  {name: {j| Nous y étions |j}, href: "#/news"},
+  {name: {j| Entraînements / Sorties |j}, href: "/entrainements"},
+  {name: {j| Qui sommes-nous ? |j}, href: "/bureau"},
+  {name: {j| Adhésion |j}, href: "/adhesion"},
+  {name: {j| Nous y étions |j}, href: "/news"},
   {name: {j| Médias |j}, href: "/"},
 ];
 
@@ -41,10 +41,16 @@ let make = () => {
       {"LYON MOUNTAIN TRAIL" |> React.string}
     </span>
     <div className=Style.headerLinksClass>
-      {List.map(({name, href}) => <Link name href />, headerLinks)
-       |> Array.of_list
-       |> React.array}
-    </div>
+         {List.map(({name, href}) => <Link name href />, headerLinks)
+          |> Array.of_list
+          |> React.array}
+       </div>
+    /* <div>
+      <Next.Link href="/"> <a> {ReasonReact.string("Home")} </a> </Next.Link>
+      <Next.Link href="/Adhesion">
+        <a> {ReasonReact.string("About")} </a>
+      </Next.Link>
+    </div> */
     <Logo />
   </nav>;
 };
