@@ -1,7 +1,7 @@
 open TW;
 
 [@react.component]
-let make = (~onServer) => {
+let make = () => {
   <div>
     <Card title="Qui sommes-nous ?">
       <p>
@@ -37,7 +37,7 @@ let make = (~onServer) => {
 
 let default = make;
 
-let getInitialProps = context =>
+/* let getInitialProps = context =>
   Js.Promise.make((~resolve, ~reject as _) => {
     let onServer =
       switch (Js.Nullable.toOption(context##req)) {
@@ -56,4 +56,4 @@ let inject:
   {| (cls, fn) => cls.getInitialProps = fn |}
 ];
 
-inject(default, getInitialProps);
+inject(default, getInitialProps); */
