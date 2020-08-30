@@ -7,13 +7,13 @@ var title = "Jeudi soir";
 
 var images = {
   hd: {
-    src: "https://scontent-cdg2-1.xx.fbcdn.net/v/t31.0-8/18422319_10158662063070471_8625508753852823434_o.jpg?_nc_cat=111&_nc_sid=825194&_nc_ohc=HFVgIW5rUCEAX8GB7Gi&_nc_ht=scontent-cdg2-1.xx&oh=5d298fd2ea23cc57d64c1cdadaa3e835&oe=5F3EA129",
+    src: "http://lyonmountaintrail.free.fr/wp-content/uploads/2018/01/Capture-d%E2%80%99%C3%A9cran-2018-01-21-%C3%A0-16.24.24.png",
     alt: "Sortie du jeudi - fourvi\xc3\xa8re"
   },
   tl: {
     hd: {
-      src: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/19665141_1409668672457760_5354924915153572430_n.jpg?_nc_cat=106&_nc_sid=b9115d&_nc_ohc=wKLq7lxTwcsAX_nZHae&_nc_ht=scontent-cdt1-1.xx&oh=bc76ada8ebefb3a98d8e1724cdec29f8&oe=5F3D6507",
-      alt: "Sortie du mardi - pluie"
+      src: "http://lyonmountaintrail.free.fr/wp-content/uploads/2018/01/Capture-d%E2%80%99%C3%A9cran-2018-01-21-%C3%A0-16.24.24.png",
+      alt: "Sortie du jeudi - fourviere2"
     },
     tl: /* [] */0
   }

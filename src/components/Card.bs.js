@@ -19,19 +19,25 @@ var cardClass = TW.make({
         tl: {
           hd: {
             TAG: /* Padding */8,
-            _0: /* P12 */9
+            _0: /* Px12 */47
           },
           tl: {
             hd: {
-              TAG: /* Display */52,
-              _0: /* Grid */5
+              TAG: /* Padding */8,
+              _0: /* Py6 */25
             },
             tl: {
               hd: {
-                TAG: /* Gap */55,
-                _0: /* Gap6 */6
+                TAG: /* Display */52,
+                _0: /* Grid */5
               },
-              tl: /* [] */0
+              tl: {
+                hd: {
+                  TAG: /* Gap */55,
+                  _0: /* Gap6 */6
+                },
+                tl: /* [] */0
+              }
             }
           }
         }

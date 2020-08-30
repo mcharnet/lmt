@@ -2,7 +2,7 @@ open TW;
 
 [@react.component]
 let make = () => {
-  <div>
+  <>
     <Card title="Qui sommes-nous ?">
       <p>
         {React.string(
@@ -32,7 +32,7 @@ let make = () => {
          |> React.array}
       </Grid>
     </Card>
-  </div>;
+  </>;
 };
 
 let default = make;

@@ -1,5 +1,13 @@
 /* purgecss start ignore */
 @tailwind base;
+p {
+  @apply my-4 indent-sm;
+}
+iframe {
+  @apply m-auto;
+}
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
+
+

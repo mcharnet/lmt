@@ -5,12 +5,12 @@ var EntrainementSection$Lmt = require("../EntrainementSection.bs.js");
 
 var images = {
   hd: {
-    src: "http://lyonmountaintrail.free.fr/wp-content/uploads/2015/10/Capture-d%E2%80%99%C3%A9cran-2018-01-21-%C3%A0-14.20.23.png",
+    src: "entrainements/mardi.jpg",
     alt: "Sortie du mardi - chaises"
   },
   tl: {
     hd: {
-      src: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/34559220_10216430112248898_198705317624676352_o.jpg?_nc_cat=103&_nc_sid=b9115d&_nc_ohc=NFAw7LcWHhkAX_0y-V8&_nc_ht=scontent-cdt1-1.xx&oh=abb648344a63d65f10f0dd1de6685148&oe=5F3D1A41",
+      src: "entrainements/mardi2.jpg",
       alt: "Sortie du mardi - pluie"
     },
     tl: /* [] */0

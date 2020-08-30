@@ -11,7 +11,7 @@ let make = () => {
       <Divider />
       <Jeudi />
       <Divider />
-      <Dimanche />
+      <WE />
     </Grid>
   </Card>;
 };

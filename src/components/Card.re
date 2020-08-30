@@ -4,7 +4,8 @@ module Style = {
     [
       BorderRadius(Rounded),
       BackgroundColor(BgGray100),
-      Padding(P12),
+      Padding(Px12),
+      Padding(Py6),
       Display(Grid),
       Gap(Gap6),
     ]
