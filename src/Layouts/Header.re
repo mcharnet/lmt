@@ -41,16 +41,10 @@ let make = () => {
       {"LYON MOUNTAIN TRAIL" |> React.string}
     </span>
     <div className=Style.headerLinksClass>
-         {List.map(({name, href}) => <Link name href />, headerLinks)
-          |> Array.of_list
-          |> React.array}
-       </div>
-    /* <div>
-      <Next.Link href="/"> <a> {ReasonReact.string("Home")} </a> </Next.Link>
-      <Next.Link href="/Adhesion">
-        <a> {ReasonReact.string("About")} </a>
-      </Next.Link>
-    </div> */
+      {List.map(({name, href}) => <Link name href />, headerLinks)
+      |> Array.of_list
+      |> React.array}
+    </div>
     <Logo />
   </nav>;
 };
