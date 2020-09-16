@@ -15,6 +15,8 @@ module Style = {
   open TW;
   let headerNavClass =
     [
+      Display(Hidden), 
+      Lg(Display(Flex)),
       Width(WFull),
       BackgroundColor(Theme.Colors.primary),
       Padding(P8),
@@ -31,7 +33,7 @@ module Style = {
     [ZIndex(Z10), Display(Grid), GridFlow(GridFlowCol), Gap(Gap12)]
     |> make;
 
-  let logoClass = [FontSize(Text4xl), ZIndex(Z0)] |> make;
+  let logoClass = [FontSize(Text3xl), ZIndex(Z0)] |> make;
 };
 
 [@react.component]
@@ -45,6 +47,5 @@ let make = () => {
       |> Array.of_list
       |> React.array}
     </div>
-    <Logo />
   </nav>;
 };

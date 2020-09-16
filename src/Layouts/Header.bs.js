@@ -5,7 +5,6 @@ var List = require("bs-platform/lib/js/list.js");
 var $$Array = require("bs-platform/lib/js/array.js");
 var React = require("react");
 var Link$Lmt = require("../components/Link.bs.js");
-var Logo$Lmt = require("../components/Logo.bs.js");
 var Theme$Lmt = require("../style/Theme.bs.js");
 
 var headerLinks = {
@@ -48,50 +47,65 @@ var headerLinks = {
 
 var headerNavClass = TW.make({
       hd: {
-        TAG: /* Width */25,
-        _0: /* WFull */46
+        TAG: /* Display */52,
+        _0: /* Hidden */9
       },
       tl: {
         hd: {
-          TAG: /* BackgroundColor */33,
-          _0: Theme$Lmt.Colors.primary
+          TAG: /* Lg */71,
+          _0: {
+            TAG: /* Display */52,
+            _0: /* Flex */3
+          }
         },
         tl: {
           hd: {
-            TAG: /* Padding */8,
-            _0: /* P8 */7
+            TAG: /* Width */25,
+            _0: /* WFull */46
           },
           tl: {
             hd: {
-              TAG: /* TextColor */9,
-              _0: /* TextWhite */6
+              TAG: /* BackgroundColor */33,
+              _0: Theme$Lmt.Colors.primary
             },
             tl: {
               hd: {
-                TAG: /* Display */52,
-                _0: /* Grid */5
+                TAG: /* Padding */8,
+                _0: /* P8 */7
               },
               tl: {
                 hd: {
-                  TAG: /* GridFlow */53,
-                  _0: /* GridFlowCol */1
+                  TAG: /* TextColor */9,
+                  _0: /* TextWhite */6
                 },
                 tl: {
                   hd: {
-                    TAG: /* Gap */55,
-                    _0: /* Gap12 */9
+                    TAG: /* Display */52,
+                    _0: /* Grid */5
                   },
                   tl: {
                     hd: {
-                      TAG: /* AlignItems */39,
-                      _0: /* ItemsCenter */2
+                      TAG: /* GridFlow */53,
+                      _0: /* GridFlowCol */1
                     },
                     tl: {
                       hd: {
-                        TAG: /* JustifyContent */17,
-                        _0: /* JustifyBetween */3
+                        TAG: /* Gap */55,
+                        _0: /* Gap12 */9
                       },
-                      tl: /* [] */0
+                      tl: {
+                        hd: {
+                          TAG: /* AlignItems */39,
+                          _0: /* ItemsCenter */2
+                        },
+                        tl: {
+                          hd: {
+                            TAG: /* JustifyContent */17,
+                            _0: /* JustifyBetween */3
+                          },
+                          tl: /* [] */0
+                        }
+                      }
                     }
                   }
                 }
@@ -131,7 +145,7 @@ var headerLinksClass = TW.make({
 var logoClass = TW.make({
       hd: {
         TAG: /* FontSize */67,
-        _0: /* Text4xl */7
+        _0: /* Text3xl */6
       },
       tl: {
         hd: {
@@ -160,7 +174,7 @@ function Header(Props) {
                                         name: param.name,
                                         href: param.href
                                       });
-                          }), headerLinks))), React.createElement(Logo$Lmt.make, {}));
+                          }), headerLinks))));
 }
 
 var make = Header;

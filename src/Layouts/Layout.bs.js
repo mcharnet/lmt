@@ -2,6 +2,7 @@
 
 var TW = require("re-tailwind/src/TW.bs.js");
 var React = require("react");
+var Logo$Lmt = require("../components/Logo.bs.js");
 
 function Layout(Props) {
   var children = Props.children;
@@ -26,7 +27,7 @@ function Layout(Props) {
       });
   return React.createElement("div", {
               className: className
-            }, children);
+            }, React.createElement(Logo$Lmt.make, {}), children);
 }
 
 var make = Layout;

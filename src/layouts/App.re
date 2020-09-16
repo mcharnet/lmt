@@ -24,6 +24,7 @@ let make = (props: props): React.element => {
   let content = React.createElement(component, pageProps);
 
   <div>
+    <HeaderMobile />
     <Header />
     {switch (router.route) {
      | "/examples" =>

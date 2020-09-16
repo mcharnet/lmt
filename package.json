@@ -17,6 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "bs-css-emotion": "^1.2.0",
+    "bs-webapi": "^0.19.1",
     "next": "latest",
     "next-transpile-modules": "^4.0.2",
     "re-tailwind": "^0.0.10",

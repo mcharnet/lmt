@@ -7,7 +7,7 @@ let handleClick = (href, event) =>
   };
 
 [@react.component]
-let make = (~name, ~href, ~fontSize=TextBase) => {
+let make = (~name, ~href, ~fontSize=TextBase, ~onClick=?) => {
   let linkClass =
     [
       Cursor(CursorPointer),
@@ -16,7 +16,13 @@ let make = (~name, ~href, ~fontSize=TextBase) => {
     ]
     |> make;
 
-  <Next.Link href>
-    <a className=linkClass> {React.string(name)} </a>
+  let onClick = ev =>
+    switch (onClick) {
+    | Some(func) => func(ev)
+    | None => ()
+    };
+
+  <Next.Link href >
+    <a className=linkClass onClick> {React.string(name)} </a>
   </Next.Link>;
 };

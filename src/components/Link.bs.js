@@ -1,6 +1,7 @@
 'use strict';
 
 var TW = require("re-tailwind/src/TW.bs.js");
+var Curry = require("bs-platform/lib/js/curry.js");
 var React = require("react");
 var Link = require("next/link");
 var ReasonReactRouter = require("reason-react/src/ReasonReactRouter.js");
@@ -17,6 +18,7 @@ function Link$1(Props) {
   var name = Props.name;
   var href = Props.href;
   var fontSizeOpt = Props.fontSize;
+  var onClick = Props.onClick;
   var fontSize = fontSizeOpt !== undefined ? fontSizeOpt : /* TextBase */2;
   var linkClass = TW.make({
         hd: {
@@ -37,10 +39,17 @@ function Link$1(Props) {
           }
         }
       });
+  var onClick$1 = function (ev) {
+    if (onClick !== undefined) {
+      return Curry._1(onClick, ev);
+    }
+    
+  };
   return React.createElement(Link.default, {
               href: href,
               children: React.createElement("a", {
-                    className: linkClass
+                    className: linkClass,
+                    onClick: onClick$1
                   }, name)
             });
 }

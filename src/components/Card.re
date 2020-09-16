@@ -15,7 +15,7 @@ module Style = {
 };
 
 [@react.component]
-let make = (~children, ~title=?, ~href=?) => {
+let make = (~children, ~title=?, ~href=?) => (
   <div className=Style.cardClass>
     {switch (title) {
      | Some(title) =>
@@ -29,5 +29,5 @@ let make = (~children, ~title=?, ~href=?) => {
      | _ => React.null
      }}
     <div> children </div>
-  </div>;
-};
+  </div>
+);
