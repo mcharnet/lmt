@@ -17,7 +17,13 @@ function Cell(Props) {
             TAG: /* Col */60,
             _0: col
           },
-          tl: /* [] */0
+          tl: {
+            hd: {
+              TAG: /* Display */52,
+              _0: /* InlineFlex */4
+            },
+            tl: /* [] */0
+          }
         }
       });
   return React.createElement("div", {
