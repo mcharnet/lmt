@@ -16,6 +16,8 @@ let make =
       TextAlign(align),
       FontWeight(fontWeight),
       TextColor(color),
+      Margin(Mb2),
+      Display(Block),
     ]
     |> make;
 

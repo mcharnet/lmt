@@ -6,8 +6,10 @@ var React = require("react");
 function Divider(Props) {
   var colorOpt = Props.color;
   var widthOpt = Props.width;
+  var marginOpt = Props.margin;
   var color = colorOpt !== undefined ? colorOpt : /* BgBlack */3;
   var width = widthOpt !== undefined ? widthOpt : /* W32 */13;
+  var margin = marginOpt !== undefined ? marginOpt : /* MAuto */18;
   var className = TW.make({
         hd: {
           TAG: /* Height */65,
@@ -26,7 +28,7 @@ function Divider(Props) {
             tl: {
               hd: {
                 TAG: /* Margin */35,
-                _0: /* MAuto */18
+                _0: margin
               },
               tl: {
                 hd: {

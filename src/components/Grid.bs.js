@@ -2,16 +2,18 @@
 
 var TW = require("re-tailwind/src/TW.bs.js");
 var React = require("react");
+var $$String = require("bs-platform/lib/js/string.js");
 
 function Grid(Props) {
   var children = Props.children;
   var colsOpt = Props.cols;
   var gapOpt = Props.gap;
   var paddingOpt = Props.padding;
+  var className = Props.className;
   var cols = colsOpt !== undefined ? colsOpt : /* GridCols1 */0;
   var gap = gapOpt !== undefined ? gapOpt : /* Gap0 */0;
   var padding = paddingOpt !== undefined ? paddingOpt : /* P0 */0;
-  var className = TW.make({
+  var gridClass = TW.make({
         hd: {
           TAG: /* Display */52,
           _0: /* Grid */5
@@ -36,8 +38,12 @@ function Grid(Props) {
           }
         }
       });
+  var className$1 = className !== undefined ? $$String.concat(gridClass, {
+          hd: className,
+          tl: /* [] */0
+        }) : gridClass;
   return React.createElement("div", {
-              className: className
+              className: className$1
             }, children);
 }
 

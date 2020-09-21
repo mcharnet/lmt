@@ -48,10 +48,10 @@ let members = [
 [@react.component]
 let make = () => {
   <Card title="Le bureau">
-    <Grid cols=GridCols6 gap=Gap12>
-      {List.map(
-         ({name, role, src, col, desc}) =>
-           <Cell col> <Avatar name ?role src desc /> </Cell>,
+    <Grid gap=Gap12>
+      {List.mapi(
+         (index, {name, role, src, desc}) =>
+           <Avatar index name ?role src desc />,
          members,
        )
        |> Array.of_list

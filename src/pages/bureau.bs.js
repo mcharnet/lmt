@@ -4,7 +4,6 @@ var List = require("bs-platform/lib/js/list.js");
 var $$Array = require("bs-platform/lib/js/array.js");
 var React = require("react");
 var Card$Lmt = require("../components/Card.bs.js");
-var Cell$Lmt = require("../components/Cell.bs.js");
 var Grid$Lmt = require("../components/Grid.bs.js");
 var Avatar$Lmt = require("../components/Avatar.bs.js");
 var Caml_option = require("bs-platform/lib/js/caml_option.js");
@@ -59,21 +58,18 @@ var members = {
 function Bureau(Props) {
   return React.createElement(Card$Lmt.make, {
               children: React.createElement(Grid$Lmt.make, {
-                    children: $$Array.of_list(List.map((function (param) {
+                    children: $$Array.of_list(List.mapi((function (index, param) {
                                 var tmp = {
                                   name: param.name,
                                   src: param.src,
-                                  desc: param.desc
+                                  desc: param.desc,
+                                  index: index
                                 };
                                 if (param.role !== undefined) {
                                   tmp.role = Caml_option.valFromOption(param.role);
                                 }
-                                return React.createElement(Cell$Lmt.make, {
-                                            children: React.createElement(Avatar$Lmt.make, tmp),
-                                            col: param.col
-                                          });
+                                return React.createElement(Avatar$Lmt.make, tmp);
                               }), members)),
-                    cols: /* GridCols6 */5,
                     gap: /* Gap12 */9
                   }),
               title: "Le bureau"
