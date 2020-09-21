@@ -85,7 +85,19 @@ function Avatar(Props) {
                   TAG: /* Margin */35,
                   _0: /* MinusMt8 */140
                 },
-                tl: /* [] */0
+                tl: {
+                  hd: {
+                    TAG: /* Width */25,
+                    _0: /* W24 */12
+                  },
+                  tl: {
+                    hd: {
+                      TAG: /* Height */65,
+                      _0: /* H24 */12
+                    },
+                    tl: /* [] */0
+                  }
+                }
               }
             }
           }
@@ -98,7 +110,10 @@ function Avatar(Props) {
                   alt: name,
                   src: src
                 }), React.createElement("div", {
-                  className: textContainerClass
+                  className: textContainerClass,
+                  style: {
+                    boxShadow: "0 -5px 5px -5px #333"
+                  }
                 }, React.createElement(Text$Lmt.make, {
                       children: name,
                       fontWeight: /* FontSemibold */15

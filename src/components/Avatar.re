@@ -25,11 +25,15 @@ let make = (~name, ~role=?, ~src) => {
       Padding(P4),
       TextAlign(TextCenter),
       Margin(MinusMt8),
+      Width(W24), 
+      Height(H24)
     ] |> make;
 
   <div className>
     <img className=imgClass src alt=name />
-    <div className=textContainerClass>
+    <div className=textContainerClass style=(
+        ReactDOMRe.Style.make(~boxShadow="0 -5px 5px -5px #333", ())
+      )>
     <Text fontWeight=FontSemibold> {React.string(name)} </Text>
     <Divider width=W6 color=Theme.BackgroundColors.primary />
     {switch (role) {
