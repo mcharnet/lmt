@@ -234,8 +234,9 @@ var Style = {
 function Header(Props) {
   return React.createElement(React.Fragment, undefined, React.createElement("nav", {
                   className: headerNavClass
-                }, React.createElement("span", {
-                      className: logoClass
+                }, React.createElement("a", {
+                      className: logoClass,
+                      href: "/"
                     }, "LYON MOUNTAIN TRAIL"), React.createElement("div", {
                       className: headerLinksClass
                     }, $$Array.of_list(List.map((function (param) {

@@ -51,7 +51,7 @@ let make = () => {
     <Grid gap=Gap12>
       {List.mapi(
          (index, {name, role, src, desc}) =>
-           <Avatar index name ?role src desc />,
+           <MemberPresentation index name ?role src desc />,
          members,
        )
        |> Array.of_list

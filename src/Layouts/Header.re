@@ -55,9 +55,9 @@ module Style = {
 let make = () => {
   <>
     <nav className=Style.headerNavClass>
-      <span className=Style.logoClass>
+      <a className=Style.logoClass href="/">
         {"LYON MOUNTAIN TRAIL" |> React.string}
-      </span>
+      </a>
       <div className=Style.headerLinksClass>
         {List.map(({name, href}) => <Link name href />, headerLinks)
          |> Array.of_list

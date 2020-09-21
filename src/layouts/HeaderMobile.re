@@ -72,9 +72,9 @@ let make = () => {
   <nav
     ref={ReactDOMRe.Ref.domRef(dropdownRef)} className=Style.headerNavClass>
     <span className=Style.logoTinyClass> {"LMT" |> React.string} </span>
-    <span className=Style.logoClass>
+    <a className=Style.logoClass href="/">
       {"LYON MOUNTAIN TRAIL" |> React.string}
-    </span>
+    </a>
     <div className=Style.burgerMenuClass>
       <button onClick=toggle className=Style.buttonClass>
         <svg
@@ -91,7 +91,9 @@ let make = () => {
     </div>
     {switch (isVisible) {
      | true =>
-       <div className=Style.headerLinksClass>
+       <div
+         className=Style.headerLinksClass
+         style={ReactDOMRe.Style.make(~top="2rem", ())}>
          {List.map(
             ({name, href}) => <Link name href onClick=toggle />,
             headerLinks,

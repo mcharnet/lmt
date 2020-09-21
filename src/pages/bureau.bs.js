@@ -5,8 +5,8 @@ var $$Array = require("bs-platform/lib/js/array.js");
 var React = require("react");
 var Card$Lmt = require("../components/Card.bs.js");
 var Grid$Lmt = require("../components/Grid.bs.js");
-var Avatar$Lmt = require("../components/Avatar.bs.js");
 var Caml_option = require("bs-platform/lib/js/caml_option.js");
+var MemberPresentation$Lmt = require("../components/MemberPresentation.bs.js");
 
 var members = {
   hd: {
@@ -68,7 +68,7 @@ function Bureau(Props) {
                                 if (param.role !== undefined) {
                                   tmp.role = Caml_option.valFromOption(param.role);
                                 }
-                                return React.createElement(Avatar$Lmt.make, tmp);
+                                return React.createElement(MemberPresentation$Lmt.make, tmp);
                               }), members)),
                     gap: /* Gap12 */9
                   }),
