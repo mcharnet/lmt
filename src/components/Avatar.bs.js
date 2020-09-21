@@ -71,7 +71,7 @@ function Avatar(Props) {
                   children: name,
                   fontWeight: /* FontSemibold */15
                 }), React.createElement(Divider$Lmt.make, {
-                  color: Theme$Lmt.Colors.primary,
+                  color: Theme$Lmt.BackgroundColors.primary,
                   width: /* W6 */6
                 }), role !== undefined ? React.createElement(Text$Lmt.make, {
                     children: role,

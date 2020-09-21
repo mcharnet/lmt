@@ -10,4 +10,6 @@ iframe {
 /* purgecss end ignore */
 @tailwind utilities;
 
-
+._2p3a {
+  margin: auto!important;
+}

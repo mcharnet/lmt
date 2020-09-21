@@ -22,7 +22,7 @@ let make = (~name, ~role=?, ~src, ~desc=?) => {
   <div className>
     <img className=imgClass src alt=name />
     <Text fontWeight=FontSemibold> {React.string(name)} </Text>
-    <Divider width=W6 color=Theme.Colors.primary />
+    <Divider width=W6 color=Theme.BackgroundColors.primary />
     {switch (role) {
      | Some(role) => <Text color=TextGray900> {React.string(role)} </Text>
      | _ => React.null

@@ -4,8 +4,12 @@ module Style = {
     [
       BorderRadius(Rounded),
       BackgroundColor(BgGray100),
-      Padding(Px12),
       Padding(Py6),
+      Padding(Px4),
+      Sm(Padding(Px6)),
+      Md(Padding(Px8)),
+      Lg(Padding(Px10)),
+      Xl(Padding(Px12)),
       Display(Grid),
       Gap(Gap6),
     ]
@@ -15,7 +19,7 @@ module Style = {
 };
 
 [@react.component]
-let make = (~children, ~title=?, ~href=?) => (
+let make = (~children, ~title=?, ~href=?) =>
   <div className=Style.cardClass>
     {switch (title) {
      | Some(title) =>
@@ -29,5 +33,4 @@ let make = (~children, ~title=?, ~href=?) => (
      | _ => React.null
      }}
     <div> children </div>
-  </div>
-);
+  </div>;

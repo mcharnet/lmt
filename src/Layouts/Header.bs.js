@@ -19,7 +19,7 @@ var headerLinks = {
     },
     tl: {
       hd: {
-        name: " Qui sommes-nous ? ",
+        name: " Le bureau ",
         href: "/bureau"
       },
       tl: {
@@ -29,16 +29,10 @@ var headerLinks = {
         },
         tl: {
           hd: {
-            name: " Nous y étions ",
+            name: " News ",
             href: "/news"
           },
-          tl: {
-            hd: {
-              name: " Médias ",
-              href: "/"
-            },
-            tl: /* [] */0
-          }
+          tl: /* [] */0
         }
       }
     }
@@ -66,7 +60,7 @@ var headerNavClass = TW.make({
           tl: {
             hd: {
               TAG: /* BackgroundColor */33,
-              _0: Theme$Lmt.Colors.primary
+              _0: Theme$Lmt.BackgroundColors.primary
             },
             tl: {
               hd: {
@@ -103,13 +97,69 @@ var headerNavClass = TW.make({
                             TAG: /* JustifyContent */17,
                             _0: /* JustifyBetween */3
                           },
-                          tl: /* [] */0
+                          tl: {
+                            hd: {
+                              TAG: /* Position */22,
+                              _0: /* Sticky */4
+                            },
+                            tl: {
+                              hd: {
+                                TAG: /* Placement */51,
+                                _0: /* Top0 */3
+                              },
+                              tl: {
+                                hd: {
+                                  TAG: /* BoxShadow */36,
+                                  _0: /* Shadow */0
+                                },
+                                tl: {
+                                  hd: {
+                                    TAG: /* ZIndex */0,
+                                    _0: /* Z10 */1
+                                  },
+                                  tl: /* [] */0
+                                }
+                              }
+                            }
+                          }
                         }
                       }
                     }
                   }
                 }
               }
+            }
+          }
+        }
+      }
+    });
+
+var headerContainerClass = TW.make({
+      hd: {
+        TAG: /* Position */22,
+        _0: /* Sticky */4
+      },
+      tl: {
+        hd: {
+          TAG: /* Placement */51,
+          _0: /* Top0 */3
+        },
+        tl: {
+          hd: {
+            TAG: /* BoxShadow */36,
+            _0: /* Shadow */0
+          },
+          tl: {
+            hd: {
+              TAG: /* Padding */8,
+              _0: /* Pt4 */61
+            },
+            tl: {
+              hd: {
+                TAG: /* Padding */8,
+                _0: /* Px2 */40
+              },
+              tl: /* [] */0
             }
           }
         }
@@ -136,7 +186,19 @@ var headerLinksClass = TW.make({
               TAG: /* Gap */55,
               _0: /* Gap12 */9
             },
-            tl: /* [] */0
+            tl: {
+              hd: {
+                TAG: /* AlignItems */39,
+                _0: /* ItemsCenter */2
+              },
+              tl: {
+                hd: {
+                  TAG: /* TextAlign */44,
+                  _0: /* TextCenter */1
+                },
+                tl: /* [] */0
+              }
+            }
           }
         }
       }
@@ -152,29 +214,36 @@ var logoClass = TW.make({
           TAG: /* ZIndex */0,
           _0: /* Z0 */0
         },
-        tl: /* [] */0
+        tl: {
+          hd: {
+            TAG: /* Whitespace */34,
+            _0: /* WhitespaceNoWrap */1
+          },
+          tl: /* [] */0
+        }
       }
     });
 
 var Style = {
   headerNavClass: headerNavClass,
+  headerContainerClass: headerContainerClass,
   headerLinksClass: headerLinksClass,
   logoClass: logoClass
 };
 
 function Header(Props) {
-  return React.createElement("nav", {
-              className: headerNavClass
-            }, React.createElement("span", {
-                  className: logoClass
-                }, "LYON MOUNTAIN TRAIL"), React.createElement("div", {
-                  className: headerLinksClass
-                }, $$Array.of_list(List.map((function (param) {
-                            return React.createElement(Link$Lmt.make, {
-                                        name: param.name,
-                                        href: param.href
-                                      });
-                          }), headerLinks))));
+  return React.createElement(React.Fragment, undefined, React.createElement("nav", {
+                  className: headerNavClass
+                }, React.createElement("span", {
+                      className: logoClass
+                    }, "LYON MOUNTAIN TRAIL"), React.createElement("div", {
+                      className: headerLinksClass
+                    }, $$Array.of_list(List.map((function (param) {
+                                return React.createElement(Link$Lmt.make, {
+                                            name: param.name,
+                                            href: param.href
+                                          });
+                              }), headerLinks)))));
 }
 
 var make = Header;

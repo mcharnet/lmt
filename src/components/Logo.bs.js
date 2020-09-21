@@ -11,7 +11,7 @@ var logoClass = TW.make({
       tl: {
         hd: {
           TAG: /* Margin */35,
-          _0: /* MinusMt48 */148
+          _0: /* MinusMt24 */145
         },
         tl: {
           hd: {

@@ -5,10 +5,10 @@ type link = {
 let headerLinks = [
   {name: {j| Accueil |j}, href: "/"},
   {name: {j| Entraînements / Sorties |j}, href: "/entrainements"},
-  {name: {j| Qui sommes-nous ? |j}, href: "/bureau"},
+  {name: {j| Le bureau |j}, href: "/bureau"},
   {name: {j| Adhésion |j}, href: "/adhesion"},
-  {name: {j| Nous y étions |j}, href: "/news"},
-  {name: {j| Médias |j}, href: "/"},
+  {name: {j| News |j}, href: "/news"},
+  /* {name: {j| Médias |j}, href: "/"}, */
 ];
 
 module Style = {
@@ -17,7 +17,7 @@ module Style = {
     [
       Lg(Display(Hidden)),
       Width(WFull),
-      BackgroundColor(Theme.Colors.primary),
+      BackgroundColor(Theme.BackgroundColors.primary),
       Padding(P8),
       TextColor(TextWhite),
       Display(Grid),
@@ -25,17 +25,40 @@ module Style = {
       Gap(Gap12),
       AlignItems(ItemsCenter),
       JustifyContent(JustifyBetween),
+      Position(Sticky),
+      Placement(Top0),
+      BoxShadow(Shadow),
+      ZIndex(Z10),
     ]
     |> make;
 
   let headerLinksClass =
-    [Padding(P6), ZIndex(Z10), Display(Grid), GridFlow(GridFlowRow), Position(Absolute), BackgroundColor(Theme.Colors.primary), TextColor(TextWhite), Placement(Right0), Margin(Mt16), Gap(Gap4)]
+    [
+      Padding(P6),
+      Display(Grid),
+      GridFlow(GridFlowRow),
+      Position(Absolute),
+      BackgroundColor(Theme.BackgroundColors.primary),
+      TextColor(TextWhite),
+      Placement(Right0),
+      Margin(Mt16),
+      Gap(Gap4),
+    ]
     |> make;
 
-  let logoTinyClass = [Sm(Display(Hidden)), FontSize(Text3xl), ZIndex(Z0)] |> make;
-  let logoClass = [Display(Hidden), Sm(Display(InlineFlex)), FontSize(Text3xl), ZIndex(Z0)] |> make;
+  let logoTinyClass =
+    [Sm(Display(Hidden)), FontSize(Text3xl), ZIndex(Z0)] |> make;
+  let logoClass =
+    [
+      Display(Hidden),
+      Sm(Display(InlineFlex)),
+      FontSize(Text3xl),
+      ZIndex(Z0),
+    ]
+    |> make;
 
-  let burgerMenuClass = [Display(Flex), Lg(Display(Hidden)), ZIndex(Z10), OutlineNone] |> make;
+  let burgerMenuClass =
+    [Display(Flex), Lg(Display(Hidden)), ZIndex(Z10), OutlineNone] |> make;
   let svgBurgerMenuClass = [Height(H6), Width(W6)] |> make;
   let buttonClass = [OutlineNone] |> make;
 };
@@ -44,32 +67,39 @@ module Style = {
 let make = () => {
   let (isVisible, setVisible) = React.useState(_ => false);
   let toggle = _ => setVisible(prevState => !prevState);
-  let dropdownRef = UseClickOutside.make(_ => setVisible(_=> false));
+  let dropdownRef = UseClickOutside.make(_ => setVisible(_ => false));
 
-  <nav ref={ReactDOMRe.Ref.domRef(dropdownRef)} className=Style.headerNavClass>
-    <span className=Style.logoTinyClass>
-      {"LMT" |> React.string}
-    </span>
+  <nav
+    ref={ReactDOMRe.Ref.domRef(dropdownRef)} className=Style.headerNavClass>
+    <span className=Style.logoTinyClass> {"LMT" |> React.string} </span>
     <span className=Style.logoClass>
       {"LYON MOUNTAIN TRAIL" |> React.string}
     </span>
     <div className=Style.burgerMenuClass>
-    <button onClick=toggle className=Style.buttonClass>
-      <svg className=Style.svgBurgerMenuClass viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-        <title>{"Menu" |> React.string}</title>
-        <path fill="#FFFFFF" d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-      </svg>
-    </button>
-  </div>
-
-  {switch isVisible {
-    | true => <div className=Style.headerLinksClass>
-                {List.map(({name, href}) => <Link name href onClick=toggle/>, headerLinks)
-                |> Array.of_list
-                |> React.array}
-              </div>
-    | _ => React.null
-  };}
-  
+      <button onClick=toggle className=Style.buttonClass>
+        <svg
+          className=Style.svgBurgerMenuClass
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <title> {"Menu" |> React.string} </title>
+          <path
+            fill="#FFFFFF"
+            d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"
+          />
+        </svg>
+      </button>
+    </div>
+    {switch (isVisible) {
+     | true =>
+       <div className=Style.headerLinksClass>
+         {List.map(
+            ({name, href}) => <Link name href onClick=toggle />,
+            headerLinks,
+          )
+          |> Array.of_list
+          |> React.array}
+       </div>
+     | _ => React.null
+     }}
   </nav>;
 };
