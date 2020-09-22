@@ -20,7 +20,7 @@ module Style = {
 
 [@react.component]
 let make = (~children, ~title=?, ~href=?) =>
-  <div className=Style.cardClass>
+  <div className={Style.cardClass ++ " loading"}>
     {switch (title) {
      | Some(title) =>
        <div className=Style.titleClass>

@@ -13,3 +13,11 @@ iframe {
 ._2p3a {
   margin: auto!important;
 }
+
+  @keyframes loading {
+    to { opacity: 1}
+  }
+  .loading {
+    opacity: 0;
+    animation: loading 1s ease-in forwards;
+  }

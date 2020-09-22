@@ -98,7 +98,7 @@ function Card(Props) {
   var title = Props.title;
   var href = Props.href;
   return React.createElement("div", {
-              className: cardClass
+              className: cardClass + " loading"
             }, title !== undefined ? React.createElement("div", {
                     className: titleClass
                   }, href !== undefined ? React.createElement(Link$Lmt.make, {
