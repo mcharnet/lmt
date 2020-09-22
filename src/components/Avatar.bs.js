@@ -9,6 +9,7 @@ var Divider$Lmt = require("./Divider.bs.js");
 function Avatar(Props) {
   var name = Props.name;
   var role = Props.role;
+  var desc = Props.desc;
   var src = Props.src;
   var className = TW.make({
         hd: {
@@ -123,7 +124,11 @@ function Avatar(Props) {
                     }), role !== undefined ? React.createElement(Text$Lmt.make, {
                         children: role,
                         color: /* TextGray900 */33
-                      }) : null));
+                      }) : null), desc !== undefined ? React.createElement(Text$Lmt.make, {
+                    children: desc,
+                    align: /* TextCenter */1,
+                    color: /* TextGray600 */24
+                  }) : null);
 }
 
 var make = Avatar;

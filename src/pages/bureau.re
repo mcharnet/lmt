@@ -45,13 +45,24 @@ let members = [
   },
 ];
 
+let gridDesktopClass = [Display(Hidden), Md(Display(Grid))] |> make;
+let gridDisplayMobile = [Md(Display(Hidden))] |> make;
+
 [@react.component]
 let make = () => {
   <Card title="Le bureau">
-    <Grid gap=Gap12>
+    <Grid gap=Gap12 className=gridDesktopClass>
       {List.mapi(
          (index, {name, role, src, desc}) =>
            <MemberPresentation index name ?role src desc />,
+         members,
+       )
+       |> Array.of_list
+       |> React.array}
+    </Grid>
+    <Grid gap=Gap12 className=gridDisplayMobile>
+      {List.map(
+         ({name, role, src, desc}) => <Avatar name ?role src desc />,
          members,
        )
        |> Array.of_list

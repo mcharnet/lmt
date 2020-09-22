@@ -1,7 +1,7 @@
 open TW;
 
 [@react.component]
-let make = (~name, ~role=?, ~src) => {
+let make = (~name, ~role=?, ~desc=?, ~src) => {
   let className =
     [
       BorderRadius(RoundedFull),
@@ -40,6 +40,14 @@ let make = (~name, ~role=?, ~src) => {
      | Some(role) => <Text color=TextGray900> {React.string(role)} </Text>
      | _ => React.null
      }}
+     
      </div>
+     {switch (desc) {
+       | Some(desc) =>
+         <Text align=TextCenter color=TextGray600>
+           {React.string(desc)}
+         </Text>
+       | None => React.null
+       }}
   </div>;
 };

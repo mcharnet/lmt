@@ -38,9 +38,12 @@ function Grid(Props) {
           }
         }
       });
-  var className$1 = className !== undefined ? $$String.concat(gridClass, {
-          hd: className,
-          tl: /* [] */0
+  var className$1 = className !== undefined ? $$String.concat(" ", {
+          hd: gridClass,
+          tl: {
+            hd: className,
+            tl: /* [] */0
+          }
         }) : gridClass;
   return React.createElement("div", {
               className: className$1

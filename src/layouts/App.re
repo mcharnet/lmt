@@ -24,6 +24,10 @@ let make = (props: props): React.element => {
   let content = React.createElement(component, pageProps);
 
   <div>
+    <Next.Head>
+      <link rel="shortcut icon" href="/favicon.png" />
+      <title> "Lyon Mountain Trail"->React.string </title>
+    </Next.Head>
     <HeaderMobile />
     <Header />
     {switch (router.route) {

@@ -49,6 +49,9 @@ function Link$1(Props) {
               href: href,
               children: React.createElement("a", {
                     className: linkClass,
+                    style: {
+                      transition: "all 300ms cubic-bezier(0.38, 0.34, 0.4, 0.89)"
+                    },
                     onClick: onClick$1
                   }, name)
             });

@@ -1,6 +1,6 @@
 [@react.component]
 let make = () => {
-  <FacebookFeed />;
+  <Card title={j|Nous y étions|j}> <FacebookFeed /> </Card>;
 };
 
 let default = make;

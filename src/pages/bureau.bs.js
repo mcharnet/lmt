@@ -1,10 +1,12 @@
 'use strict';
 
+var TW = require("re-tailwind/src/TW.bs.js");
 var List = require("bs-platform/lib/js/list.js");
 var $$Array = require("bs-platform/lib/js/array.js");
 var React = require("react");
 var Card$Lmt = require("../components/Card.bs.js");
 var Grid$Lmt = require("../components/Grid.bs.js");
+var Avatar$Lmt = require("../components/Avatar.bs.js");
 var Caml_option = require("bs-platform/lib/js/caml_option.js");
 var MemberPresentation$Lmt = require("../components/MemberPresentation.bs.js");
 
@@ -55,25 +57,68 @@ var members = {
   }
 };
 
+var gridDesktopClass = TW.make({
+      hd: {
+        TAG: /* Display */52,
+        _0: /* Hidden */9
+      },
+      tl: {
+        hd: {
+          TAG: /* Md */70,
+          _0: {
+            TAG: /* Display */52,
+            _0: /* Grid */5
+          }
+        },
+        tl: /* [] */0
+      }
+    });
+
+var gridDisplayMobile = TW.make({
+      hd: {
+        TAG: /* Md */70,
+        _0: {
+          TAG: /* Display */52,
+          _0: /* Hidden */9
+        }
+      },
+      tl: /* [] */0
+    });
+
 function Bureau(Props) {
   return React.createElement(Card$Lmt.make, {
-              children: React.createElement(Grid$Lmt.make, {
-                    children: $$Array.of_list(List.mapi((function (index, param) {
-                                var tmp = {
-                                  name: param.name,
-                                  src: param.src,
-                                  desc: param.desc,
-                                  index: index
-                                };
-                                if (param.role !== undefined) {
-                                  tmp.role = Caml_option.valFromOption(param.role);
-                                }
-                                return React.createElement(MemberPresentation$Lmt.make, tmp);
-                              }), members)),
-                    gap: /* Gap12 */9
-                  }),
+              children: null,
               title: "Le bureau"
-            });
+            }, React.createElement(Grid$Lmt.make, {
+                  children: $$Array.of_list(List.mapi((function (index, param) {
+                              var tmp = {
+                                name: param.name,
+                                src: param.src,
+                                desc: param.desc,
+                                index: index
+                              };
+                              if (param.role !== undefined) {
+                                tmp.role = Caml_option.valFromOption(param.role);
+                              }
+                              return React.createElement(MemberPresentation$Lmt.make, tmp);
+                            }), members)),
+                  gap: /* Gap12 */9,
+                  className: gridDesktopClass
+                }), React.createElement(Grid$Lmt.make, {
+                  children: $$Array.of_list(List.map((function (param) {
+                              var tmp = {
+                                name: param.name,
+                                desc: param.desc,
+                                src: param.src
+                              };
+                              if (param.role !== undefined) {
+                                tmp.role = Caml_option.valFromOption(param.role);
+                              }
+                              return React.createElement(Avatar$Lmt.make, tmp);
+                            }), members)),
+                  gap: /* Gap12 */9,
+                  className: gridDisplayMobile
+                }));
 }
 
 var make = Bureau;
@@ -81,8 +126,10 @@ var make = Bureau;
 var $$default = Bureau;
 
 exports.members = members;
+exports.gridDesktopClass = gridDesktopClass;
+exports.gridDisplayMobile = gridDisplayMobile;
 exports.make = make;
 exports.$$default = $$default;
 exports.default = $$default;
 exports.__esModule = true;
-/* react Not a pure module */
+/* gridDesktopClass Not a pure module */

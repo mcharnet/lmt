@@ -2,10 +2,11 @@ open TW;
 
 [@react.component]
 let make = (~name, ~role=?, ~src, ~desc=?, ~index=0) => {
-  let order = switch (index mod 2) {
-  | 1 => OrderLast
-  | _ => OrderFirst
-  };
+  let order =
+    switch (index mod 2) {
+    | 1 => OrderLast
+    | _ => OrderFirst
+    };
 
   let imgClass =
     [
@@ -13,7 +14,7 @@ let make = (~name, ~role=?, ~src, ~desc=?, ~index=0) => {
       Width(WFull),
       Height(HAuto),
       ObjectFit(ObjectCover),
-      Order(order)
+      Order(order),
     ]
     |> make;
 
@@ -23,8 +24,7 @@ let make = (~name, ~role=?, ~src, ~desc=?, ~index=0) => {
       <Text fontWeight=FontSemibold> {React.string(name)} </Text>
       <Divider margin=Mx0 width=W6 color=Theme.BackgroundColors.primary />
       {switch (role) {
-       | Some(role) =>
-         <P color=TextGray900> {React.string(role)} </P>
+       | Some(role) => <P color=TextGray900> {React.string(role)} </P>
        | _ => React.null
        }}
       {switch (desc) {

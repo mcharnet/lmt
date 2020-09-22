@@ -7,7 +7,7 @@ let make = (~children, ~cols=GridCols1, ~gap=Gap0, ~padding=P0, ~className=?) =>
 
   let className =
     switch (className) {
-    | Some(className) => String.concat(gridClass, [className])
+    | Some(className) => String.concat(" ", [gridClass, className])
     | _ => gridClass
     };
 
