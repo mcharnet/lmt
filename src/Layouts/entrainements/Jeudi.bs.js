@@ -7,12 +7,12 @@ var title = "Jeudi soir";
 
 var images = {
   hd: {
-    src: "http://lyonmountaintrail.free.fr/wp-content/uploads/2018/01/Capture-d%E2%80%99%C3%A9cran-2018-01-21-%C3%A0-16.24.24.png",
+    src: "entrainements/mardi3.jpg",
     alt: "Sortie du jeudi - fourvi\xc3\xa8re"
   },
   tl: {
     hd: {
-      src: "http://lyonmountaintrail.free.fr/wp-content/uploads/2018/01/Capture-d%E2%80%99%C3%A9cran-2018-01-21-%C3%A0-16.24.24.png",
+      src: "entrainements/mardi7.jpg",
       alt: "Sortie du jeudi - fourviere2"
     },
     tl: /* [] */0

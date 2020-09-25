@@ -36,3 +36,8 @@ let make = () => {
 };
 
 let default = make;
+
+/* TODO
+   Créer un loader sympa :
+   la premiere fois que tu arrives sur le site, une div noire qui prend toute la place,
+   avec une montagne en SVG blanche  qui se dessine puis qui disparait au bout de 1s */

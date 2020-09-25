@@ -1,6 +1,6 @@
 open TW;
 
-let completText = {j|Victime de notre succès, nous sommes au complet pour le moment et stoppons les adhésions pour la saison 2019-2020|j};
+let completText = {j|Victime de notre succès, nous sommes au complet pour le moment et stoppons les adhésions pour la saison 2020-2021|j};
 let rejoindreText = {j|Envie de nous rejoindre ?|j};
 
 [@react.component]

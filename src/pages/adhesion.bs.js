@@ -6,7 +6,7 @@ var Grid$Lmt = require("../components/Grid.bs.js");
 var Text$Lmt = require("../components/Text.bs.js");
 var Image$Lmt = require("../components/Image.bs.js");
 
-var completText = "Victime de notre succès, nous sommes au complet pour le moment et stoppons les adhésions pour la saison 2019-2020";
+var completText = "Victime de notre succès, nous sommes au complet pour le moment et stoppons les adhésions pour la saison 2020-2021";
 
 var rejoindreText = "Envie de nous rejoindre ?";
 

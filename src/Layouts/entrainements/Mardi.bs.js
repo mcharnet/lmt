@@ -5,13 +5,13 @@ var EntrainementSection$Lmt = require("../EntrainementSection.bs.js");
 
 var images = {
   hd: {
-    src: "entrainements/mardi.jpg",
-    alt: "Sortie du mardi - chaises"
+    src: "entrainements/mardi6.jpg",
+    alt: "Sortie du mardi"
   },
   tl: {
     hd: {
-      src: "entrainements/mardi2.jpg",
-      alt: "Sortie du mardi - pluie"
+      src: "entrainements/mardi5.jpg",
+      alt: "Sortie du mardi"
     },
     tl: /* [] */0
   }
